@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Tärning</title>
@@ -14,29 +9,21 @@ and open the template in the editor.
         <link rel="stylesheet" href="tarning.css">
     </head>
     <body>
-        <!--tomma boxar-->
-        <div class="box" id="1">
-        </div><div class="box" id="2">
-        </div><div class="box" id="3">
-        </div><div class="box" id="4">
-        </div>
-        <!--slut tommma boxar-->
-
-
 
         <!--radio knappar-->
-        <input type="radio" name="antal" id="1" value="1" />
-        <label for="1">1</label> <br />
-        <input type="radio" name="antal" id="2" value="2" />
-        <label for="2">2</label> <br />
-        <input type="radio" name="antal" id="3" value="3" />
-        <label for="3">3</label> <br />
-        <input type="radio" name="antal" id="4" value="4" />
-        <label for="4">4</label>
-        <br>
-        <!--knapp-->
-        <button class="kasta">Kasta Tärningarna</button>
-        <!--knapp-->
-
+        <form method="POST" name="myForm">
+            <input type="radio" name="antal" id="1" value="1" class="antal"/>
+            <label for="1">1</label> <br />
+            <input type="radio" name="antal" id="2" value="2" class="antal"/>
+            <label for="2">2</label> <br />
+            <input type="radio" name="antal" id="3" value="3" class="antal"/>
+            <label for="3">3</label> <br />
+            <br>
+            <!--knapp-->
+            <input type="submit" value="Kasta Tärningarna" name="kasta" class="kasta">
+        </form>
+        
+        <div id="box"></div>
+        
     </body>
 </html>
