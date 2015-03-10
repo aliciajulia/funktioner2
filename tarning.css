@@ -4,3 +4,8 @@
     border: 2px solid black;
     
 }
+h1 {
+    color: orange;
+    font-family: fantasy;
+    font-size: 20px;
+}

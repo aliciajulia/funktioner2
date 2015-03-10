@@ -16,7 +16,7 @@ $(document).ready(function() {
         switch (x) {
             case 1:
                 $('<p>').text(summa).appendTo("#box1");
-                console.log(summa);
+//                console.log(summa);
                 break;
             case 2:
                 $('<p>').text(summa).appendTo("#box2");
@@ -31,8 +31,10 @@ $(document).ready(function() {
     }
     $(".kasta").click(function() {
         var antal = $('.antal:checked').val();
-        console.log(antal);
+//        console.log(antal);
         kasta(antal);
 
     });
+    
+    
 });
