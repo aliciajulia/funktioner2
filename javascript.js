@@ -4,17 +4,35 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    function kasta($kastad) {
+    function kasta(kastad) {
+        var summa = 0;
+        var tal = new Array();
+        for (var i = 0; i < kastad; i++) {
+            var tmp = Math.floor((Math.random() * 6) + 1);
+            summa += tmp;
+            tal.push(tmp);
+        }
+        var x = tal.length;
+        switch (x) {
+            case 1:
+                $('<p>').text(summa).appendTo("#box1");
+                console.log(summa);
+                break;
+            case 2:
+                $('<p>').text(summa).appendTo("#box2");
+                break;
+            case 3:
+                $('<p>').text(summa).appendTo("#box3");
+                break;
+            default:$('<p>').text("Något gick fel").appendTo("#p");
+        }
 
-        var tal = Math.floor((Math.random() * 6) + 1);
-        var talToString = tal.toString();
-        $('<p>').text(talToString).appendTo("#box");
-        console.log(talToString);
+
     }
     $(".kasta").click(function() {
-        kasta();
-    });
+        var antal = $('.antal:checked').val();
+        console.log(antal);
+        kasta(antal);
 
-    var antal = $('.antal:checked').val();
-    console.log(antal);
+    });
 });
