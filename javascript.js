@@ -13,6 +13,16 @@ $(document).ready(function() {
             tal.push(tmp);
         }
         var x = tal.length;
+        $("#p").html("");
+        for (var a = 0; a < x; a++) {
+            if (a == x - 1) {
+                $("<p>").text(tal[a]).appendTo("#p");
+            }
+            else {
+                $("<p>").text(tal[a] + "+").appendTo("#p");
+            }
+        }
+        $("<p>").text("=" + summa).appendTo("#p");
         switch (x) {
             case 1:
                 $('<p>').text(summa).appendTo("#box1");
@@ -24,7 +34,8 @@ $(document).ready(function() {
             case 3:
                 $('<p>').text(summa).appendTo("#box3");
                 break;
-            default:$('<p>').text("Något gick fel").appendTo("#p");
+            default:
+                $('<p>').text("Något gick fel").appendTo("#p");
         }
 
 
@@ -35,6 +46,6 @@ $(document).ready(function() {
         kasta(antal);
 
     });
-    
-    
+
+
 });
